@@ -1,0 +1,21 @@
+{
+  "name": "indmk-web",
+  "version": "1.0.0",
+  "description": "indmk web app",
+  "main": "index.js",
+  "type": "module",
+  "repository": "git@github.com:chris-zano/indmk.git",
+  "author": "Christian Solomon <cncs.chris@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}
