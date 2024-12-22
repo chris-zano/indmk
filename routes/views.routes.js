@@ -1,4 +1,5 @@
-import {Router} from 'express';
+import {response, Router} from 'express';
+import { sendMail } from '../utils/mail.worker.util.js';
 
 const router = Router();
 
@@ -57,5 +58,41 @@ router.get('/login', (req, res) => {
         layout:'login',
     });
 })
+
+router.post('/form/contact', async (req, res) => {
+    try {
+        const { 'first-name': firstName, 'last-name': lastName, email, phone, subject, message } = req.body;
+
+        // Create the email content
+        const emailHtml = `
+            <h2>Contact Form Submission</h2>
+            <p><strong>First Name:</strong> ${firstName || 'N/A'}</p>
+            <p><strong>Last Name:</strong> ${lastName || 'N/A'}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Phone:</strong> ${phone || 'N/A'}</p>
+            <p><strong>Subject:</strong> ${subject || 'N/A'}</p>
+            <p><strong>Message:</strong></p>
+            <p>${message}</p>
+        `;
+
+        const emailSubject = `New Contact Form Submission${subject ? ` - ${subject}` : ''}`;
+        const recipientEmail = 'info@indmk.org';
+
+        const isSent = await sendMail({
+            to: recipientEmail,
+            subject: emailSubject,
+            html: emailHtml
+        });
+
+        if (isSent) {
+            return res.status(200).redirect('/contact?status=success');
+        } else {
+            return res.status(500).redirect('/contact?status=failure');
+        }
+    } catch (error) {
+        console.error('Error processing contact form:', error);
+        return res.status(500).redirect('/contact?status=failure');
+    }
+});
 
 export default router;
