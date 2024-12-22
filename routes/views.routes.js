@@ -34,4 +34,12 @@ router.get('/projects', (req, res) => {
     });
 })
 
+router.get('/blog', (req, res) => {
+    res.render('index', {
+        title: "Blog | ",
+        currentPath: 'Blog',
+        layout:'blog',
+    });
+})
+
 export default router;
