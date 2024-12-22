@@ -949,5 +949,73 @@
     section.blogs article:hover .right-third-row > * {
         color: var(--primary);
     }
+
+    section.contact-home .conatct-banner {
+        position: relative;
+    }
+
+    section.contact-home .conatct-banner .contact-overlay {
+        background: linear-gradient(
+            to right, 
+            #0f0f0ff1, 
+            #0f0f0fd8, 
+            #0a0a0a9c,
+            #0f0f0fd8
+        );
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    section.contact-home .conatct-banner .contact-overlay .card {
+        height: 100%;
+        width: 40%;
+        margin: 0 0 0 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    section.contact-home .card h1{
+        font-size: 70px;
+        font-weight: bolder;
+        color: var(--white);
+    }
+
+    section.contact-home .card .underscore {
+        margin-top: 1rem;
+        margin-left: 0.5rem;
+        height: 5px;
+        width: 170px;
+        background-color: var(--primary);
+    }
+
+    section.contact-home .card .some-text span {
+        color: var(--white);
+        font-size: 19px;
+    }
+
+    section.contact-home .contact-now-btn a {
+        padding: 1rem 2rem;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1ch;
+        background-color: var(--primary);
+        color: var(--white);
+        font-size: 1.2rem;
+        text-align: center;
+        transition: all ease-in-out 250ms;
+    }
+    
+    section.contact-home .contact-now-btn a:hover {
+        background-color: var(--white);
+        color: var(--primary);
+
+    }
 }
 

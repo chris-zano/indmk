@@ -42,4 +42,12 @@ router.get('/blog', (req, res) => {
     });
 })
 
+router.get('/contact', (req, res) => {
+    res.render('index', {
+        title: "Contact | ",
+        currentPath: 'Contact',
+        layout:'contact',
+    });
+})
+
 export default router;
