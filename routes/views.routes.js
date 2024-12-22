@@ -26,4 +26,12 @@ router.get('/products', (req, res) => {
     });
 })
 
+router.get('/projects', (req, res) => {
+    res.render('index', {
+        title: "Other Granite Projects | ",
+        currentPath: 'Projects',
+        layout:'projects',
+    });
+})
+
 export default router;
