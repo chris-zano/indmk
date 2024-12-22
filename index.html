@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        /* style.css */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            /* Light background */
+        }
+
+        .container {
+            display: flex;
+            width: 90%;
+            /* Adjust as needed */
+            max-width: 1200px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow */
+            padding: 20px;
+        }
+
+        .form-section {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .contact-info {
+            flex: 1;
+            background-color: #111;
+            /* Dark background */
+            color: white;
+            padding: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: calc(100% - 12px);
+            /* Account for padding */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            /* Include padding in width */
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: #f0ad4e;
+            /* Example button color */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            /* Align items to the top */
+            margin-bottom: 20px;
+        }
+
+        .contact-item img {
+            width: 30px;
+            /* Adjust icon size */
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .contact-item.location img {
+            margin-top: 5px;
+            /* Adjust for location icon alignment */
+        }
+
+        .contact-info h2 {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 10px;
+        }
+
+        /* Responsive adjustments (example) */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                /* Stack sections vertically */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h2>Let's get started</h2>
+            <form action="#" method="post">
+                <div class="input-group">
+                    <label for="first-name">First name</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Your First Name">
+                </div>
+                <div class="input-group">
+                    <label for="last-name">Last name</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Your Last Name">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="e.g., email@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Insert your phone number here">
+                </div>
+                <div class="input-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Insert Subject Here">
+                </div>
+                <div class="input-group">
+                    <label for="message">Write a message *</label>
+                    <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <div class="contact-item">
+                <img src="email-icon.png" alt="Email Icon">
+                <p>Send E-Mail<br>info@indmk.com</p>
+            </div>
+            <div class="contact-item">
+                <img src="whatsapp-icon.png" alt="WhatsApp Icon">
+                <p>WhatsApp<br>+855 66 749009</p>
+            </div>
+            <div class="contact-item">
+                <img src="telegram-icon.png" alt="Telegram Icon">
+                <p>Call/Telegram<br>(+855) 17 345546<br>(+855) 97 4128382</p>
+            </div>
+            <div class="contact-item location">
+                <img src="location-icon.png" alt="Location Icon">
+                <p>Our Location<br>1123 Street, Thanol Village, Svaychras Commune, Snoul District, Kratie Province
+                    Cambodia</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

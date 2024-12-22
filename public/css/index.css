@@ -1015,7 +1015,104 @@
     section.contact-home .contact-now-btn a:hover {
         background-color: var(--white);
         color: var(--primary);
+    }
 
+    .contact-container {
+        display: grid;
+        grid-template-columns: 400px 300px;
+        width: fit-content;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+    .contact-container .form-section {
+        padding: 20px;
+        margin: 1rem auto;
+    }
+
+    .contact-container .form-section form {
+        background-color: var(--white);
+        box-shadow: 0px 3px 10px #615f5f;
+        padding: 2rem;
+        margin: 1rem 0;
+    }
+
+    .contact-container .group-1 {
+        display: flex;
+    }
+
+    .contact-container .input-group {
+        margin-bottom: 15px;
+    }
+
+    .contact-container label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .contact-container input[type="text"],
+    .contact-container input[type="email"],
+    .contact-container input[type="tel"],
+    .contact-container textarea {
+        width: calc(100% - 12px);
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .contact-container textarea {
+        height: 100px;
+        resize: vertical;
+    }
+
+    .contact-container button {
+        background-color: #f0ad4e;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .contact-container .contact-info {
+        width: 400px;
+        background-color: #111;
+        color: white;
+        padding: 20px 20px 20px 0;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .contact-container .contact-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .contact-container .contact-item img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .contact-container .contact-item p {
+        color: var(--white);
+    }
+
+    .contact-container .contact-info h2 {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .contact-container {
+            flex-direction: column;
+        }
     }
 }
 
