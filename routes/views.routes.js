@@ -50,4 +50,12 @@ router.get('/contact', (req, res) => {
     });
 })
 
+router.get('/login', (req, res) => {
+    res.render('login', {
+        title: "Login",
+        currentPath: 'Login',
+        layout:'login',
+    });
+})
+
 export default router;
