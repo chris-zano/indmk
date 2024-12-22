@@ -10,4 +10,20 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/about', (req, res) => {
+    res.render('index', {
+        title: "About |",
+        currentPath: 'About',
+        layout:'about',
+    });
+})
+
+router.get('/products', (req, res) => {
+    res.render('index', {
+        title: "Granite Products ",
+        currentPath: 'Products',
+        layout:'products',
+    });
+})
+
 export default router;

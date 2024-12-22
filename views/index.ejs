@@ -16,8 +16,9 @@
         <!-- header is included here -->
         <%- include('templates/header.ejs') %>
         <main>
-            <%- include('layouts/home.ejs') %>
+            <%- include('layouts/' + layout) %>
         </main>
+        <%- include('templates/footer.ejs' ) %>
     </div>
 </body>
 
