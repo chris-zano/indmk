@@ -363,7 +363,7 @@
         padding: 1rem 3rem;
     }
 
-    section.home-showroom .row-3 > *::-webkit-scrollbar {
+    .row-3 > *::-webkit-scrollbar {
         display: unset;
         display: none;
         visibility: hidden;
@@ -383,14 +383,39 @@
         border-radius: 50%;
         pointer-events: none;
     }
-    
-    div.projects-list .row-3 .marquee img {
-        height: 400px;
-        
-        pointer-events: none;
+
+
+    div.projects-list .row-3 .marquee {
+        border-radius: 1ch;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all ease-in-out 550ms; 
+        padding: 1rem;
+        display: flex;
+        flex-flow: row;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        gap: 1.5rem; 
     }
 
-
+    div.projects-list .row-3 .marquee .overlay {
+        height: 650px;
+        width: 250px;
+        border-radius: 1ch;
+        cursor: pointer;
+        transition: all ease-in-out 550ms;   
+    }
+    
+    div.projects-list .row-3 .marquee  .overlay  img {
+        height: 650px;
+        width: 250px;
+        transition: transform ease-in-out 550ms;
+        cursor: pointer;
+    }
+    
+    div.projects-list .row-3 .marquee  .overlay:hover img {
+        transform: scale(1.1);
+    }
 
     section.home-video {
         padding: 2rem 1rem;
